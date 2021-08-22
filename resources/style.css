@@ -1,0 +1,167 @@
+body {
+	margin: 0;
+	background-color: black;
+	background-image: url(../images/rooklogo.png);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+}
+nav {
+	top: 0;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.9);
+	width: 100%;
+	z-index: 99;
+}
+h1 {
+	margin: 0;
+	font-size: 80px;
+	font-family: nebulous;
+	text-align: center;
+	color: white;
+}
+h2 {
+	font-size: 50px;
+	margin: 0;
+	font-family: nebulous;
+	text-align: center;
+	color: white;
+}
+h3 {
+	font-size: 36px;
+	font-family: nebulous;
+	text-align: center;
+	color: white;
+}
+p,
+li {
+	font-size: 20px;
+	font-family: jura;
+	color: white;
+}
+strong {
+	font-weight: bolder;
+	font-size: 24px;
+}
+th {
+	font-family: jura;
+	font-weight: 1000;
+	color: white;
+	font-size: 20px;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+td {
+	font-size: 20px;
+	font-family: jura;
+	font-weight: initial;
+	color: white;
+}
+nav table:nth-of-type(1) {
+	display: inline-block;
+	left: 0;
+}
+nav table:nth-of-type(2) {
+	float: right;
+}
+nav table:nth-of-type(2) th {
+	padding: 10px;
+}
+nav table:nth-of-type(2) img {
+	height: 28px;
+	padding: 0;
+	margin: 0;
+}
+.img-link {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+}
+.header {
+	height: 1000px;
+	background-color: rgba(0, 0, 0, 0.65);
+	width: 100%;
+}
+.header h1 {
+	top: 50%;
+	position: relative;
+	font-size: 120px;
+}
+.header h2 {
+	top: 50%;
+	position: relative;
+	margin: 0;
+	font-size: 36px;
+	font-family: nebulous;
+	text-align: center;
+	color: white;
+}
+.maincontent {
+	background-color: rgba(0, 0, 0, 0.7);
+	display: block;
+	width: 100%;
+	padding-bottom: 40px;
+	min-height: 50vh;
+}
+.content {
+	padding-top: 30px !important;
+	padding: 100px;
+	color: white;
+}
+.table {
+	padding: 5px;
+	border: 1px solid white;
+	border-collapse: collapse;
+}
+.button-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+.button {
+	background-color: darkgray;
+	width: 30%;
+	padding: 10px;
+	color: white;
+	font-family: nebulous;
+	text-align: center;
+}
+.button:hover {
+	background-color: lightgray;
+	text-decoration: none;
+}
+.button p {
+	font-size: 50px;
+	font-weight: 500;
+	margin: 5px;
+	font-family: nebulous;
+}
+.button:hover p {
+	color: black;
+}
+.button p:not(:first-of-type) {
+	font-size: 22px;
+}
+.background {
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-attachment: fixed;
+	background-position: center;
+}
+/*FONTS*/
+@font-face {
+	font-family: nebulous;
+	src: url("Nebulous-Regular.ttf");
+}
+@font-face {
+	font-family: jura;
+	src: url("Jura-VariableFont_wght.ttf");
+}

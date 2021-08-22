@@ -1,0 +1,113 @@
+body {
+	margin: 0px;
+	background-color: black;
+}
+nav {
+	top: 0;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.9);
+	width: 100%;
+	z-index: 99;
+}
+p, li {
+	font-size: 20px;
+	font-family: jura;
+}
+strong {
+	font-weight: bolder;
+	font-size: 24px;
+}
+th {
+	font-family: jura;
+	font-weight: 1000;
+	color: white;
+	font-size: 20px;
+}
+h1 {
+	margin: 0;
+	font-size: 100px;
+	font-family: nebulous;
+	text-align: center;
+	color: white;
+}
+h2 {
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	font-family: jura;
+	font-weight: 500;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:not(nav a) {
+	color: white;
+	text-decoration: underline;
+}
+a:not(nav a):hover {
+	text-decoration: underline;
+	text-decoration-style: double;
+}
+nav table:nth-of-type(1) {
+	display: inline-block;
+	left: 0;
+}
+nav table:nth-of-type(2) {
+	float: right;
+}
+nav table:nth-of-type(2) th {
+	padding: 10px;
+}
+nav table:nth-of-type(2) img {
+	height: 28px;
+	padding: 0;
+	margin: 0;
+}
+.img-link {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+}
+.header {
+	height: 1000px;
+	background-color: rgba(0, 0, 0, 0.65);
+	width: 100%;
+}
+.heading {
+	top: 50%;
+	position: relative;
+}
+.maincontent {
+	background-color: black;
+	display: block;
+	width: 100%;
+}
+.content {
+	padding-top: 30px !important;
+	padding: 100px;
+	color: white;
+	min-height: 700px;
+}
+.navlink {
+	color: white;
+	text-decoration: none;
+}
+.navlink:hover {
+	color: white;
+	text-decoration: underline;
+}
+/*FONTS*/
+@font-face {
+	font-family: nebulous;
+	src: url("Nebulous-Regular.ttf");
+}
+@font-face {
+	font-family: jura;
+	src: url("Jura-VariableFont_wght.ttf");
+}
