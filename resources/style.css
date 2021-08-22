@@ -18,26 +18,26 @@ nav {
 h1 {
 	margin: 0;
 	font-size: 80px;
-	font-family: nebulous;
+	font-family: AquireBold;
 	text-align: center;
 	color: white;
 }
 h2 {
 	font-size: 50px;
 	margin: 0;
-	font-family: nebulous;
+	font-family: AquireBold;
 	text-align: center;
 	color: white;
 }
 h3 {
 	font-size: 36px;
-	font-family: nebulous;
+	font-family: Momcake;
 	text-align: center;
 	color: white;
 }
 p, li {
 	font-size: 20px;
-	font-family: jura;
+	font-family: SegoeUI;
 	color: white;
 }
 strong {
@@ -45,10 +45,16 @@ strong {
 	font-size: 24px;
 }
 th {
-	font-family: jura;
+	font-family: SegoeUI;
 	font-weight: 1000;
 	color: white;
 	font-size: 20px;
+}
+td {
+	font-size: 20px;
+	font-family: SegoeUI;
+	font-weight: initial;
+	color: white;
 }
 a {
 	color: white;
@@ -57,11 +63,9 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-td {
-	font-size: 20px;
-	font-family: jura;
-	font-weight: initial;
-	color: white;
+nav th {
+	font-family:Momcake;
+	font-size:25px;
 }
 nav table:nth-of-type(1) {
 	display: inline-block;
@@ -100,7 +104,7 @@ nav table:nth-of-type(2) img {
 	position: relative;
 	margin: 0;
 	font-size: 36px;
-	font-family: nebulous;
+	font-family: Momcake;
 	text-align: center;
 	color: white;
 }
@@ -131,7 +135,7 @@ nav table:nth-of-type(2) img {
 	width: 30%;
 	padding: 10px;
 	color: white;
-	font-family: nebulous;
+	font-family: AquireBold;
 	text-align: center;
 }
 .button:hover {
@@ -142,7 +146,7 @@ nav table:nth-of-type(2) img {
 	font-size: 50px;
 	font-weight: 500;
 	margin: 5px;
-	font-family: nebulous;
+	font-family: Momcake;
 }
 .button:hover p {
 	color: black;
@@ -158,10 +162,14 @@ nav table:nth-of-type(2) img {
 }
 /*FONTS*/
 @font-face {
-	font-family: nebulous;
-	src: url("Nebulous-Regular.ttf");
+	font-family: AquireBold;
+	src: url("./fonts/AquireBold.otf");
 }
 @font-face {
-	font-family: jura;
-	src: url("Jura-VariableFont_wght.ttf");
+	font-family: Momcake;
+	src: url("./fonts/MomcakeThin.otf");
+}
+@font-face {
+	font-family: SegoeUI;
+	src: url("./fonts/Segoe-UI.ttf");
 }

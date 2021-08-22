@@ -11,14 +11,14 @@ nav {
 }
 p, li {
 	font-size: 20px;
-	font-family: jura;
+	font-family: SegoeUI;
 }
 strong {
 	font-weight: bolder;
 	font-size: 24px;
 }
 th {
-	font-family: jura;
+	font-family: SegoeUI;
 	font-weight: 1000;
 	color: white;
 	font-size: 20px;
@@ -26,7 +26,7 @@ th {
 h1 {
 	margin: 0;
 	font-size: 100px;
-	font-family: nebulous;
+	font-family: AquireBold;
 	text-align: center;
 	color: white;
 }
@@ -34,7 +34,7 @@ h2 {
 	text-align: center;
 	color: white;
 	font-size: 30px;
-	font-family: jura;
+	font-family: Momcake;
 	font-weight: 500;
 }
 a {
@@ -104,10 +104,15 @@ nav table:nth-of-type(2) img {
 }
 /*FONTS*/
 @font-face {
-	font-family: nebulous;
-	src: url("Nebulous-Regular.ttf");
+	font-family: AquireBold;
+	src: url("./fonts/AquireBold.otf");
 }
 @font-face {
-	font-family: jura;
-	src: url("Jura-VariableFont_wght.ttf");
+	font-family: Momcake;
+	src: url("./fonts/MomcakeThin.otf");
 }
+@font-face {
+	font-family: SegoeUI;
+	src: url("./fonts/Segoe-UI.ttf");
+}
+
