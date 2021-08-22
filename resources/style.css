@@ -1,11 +1,12 @@
 body {
 	margin: 0;
 	background-color: black;
-	background-image: url(../images/rooklogo.png);
+	background-image: url(../images/main-background.jpg);
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: auto 100%;
+	/* background-size: auto 100%; */
+	background-size: 100% auto;
 }
 nav {
 	top: 0;
@@ -34,8 +35,7 @@ h3 {
 	text-align: center;
 	color: white;
 }
-p,
-li {
+p, li {
 	font-size: 20px;
 	font-family: jura;
 	color: white;
