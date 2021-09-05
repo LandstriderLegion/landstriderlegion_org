@@ -4,8 +4,8 @@
 		<title>Latest News &amp; Announcements | The Rook Platoon</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="../resources/style.css" />
-		<link rel="icon" href="../resources/icon.png" sizes="192x192" />
+		<link rel="stylesheet" href="/resources/style.css" />
+		<link rel="icon" href="/resources/icon.png" sizes="192x192" />
 		<meta
 			name="description"
 			content="The Rook Platoon is an interstellar fraternity of Miners, Traders and Anti-Xeno Hunters founded in October of 3306. Supported by commanders of all ranks and creeds, Rook Platoon molds fledgling commanders into masters of their trades."
@@ -36,8 +36,9 @@
 			}
 			.pub-date {font-size:15px;}
 			.feed-item {
-				display: grid;
-				grid-template-columns: 25% 75%;
+				display:flex;
+				flex-direction: row;
+				column-gap: 2%;
 				padding:2%;
 				border-left: none;
 				border-right: none;
@@ -57,20 +58,33 @@
 		</header>
 		<div class="background">
 			<section class="maincontent">
-				<p id="rss-link"><a href="news.xml">RSS Feed</a></p>
+				<p id="rss-link"><a target="_blank" href="news.xml">RSS Feed</a></p>
 				<div id="feed">
-					<!-- <a class="feed-item" href="link">
+					<template>
+						<a class="feed-item" href="link">
+							<div>
+								<img src="./thumb/icon.png" alt="article icon" />
+								<p class="pub-date">Month Date, Year</p>
+							</div>
+							<article>
+								<p><strong>Title</strong></p>
+								<p>
+									Description
+								</p>
+							</article>
+						</a>
+					</template>
+      			<!-- First Squadron Wide Event: A Mini Expedition to the California Nebula -->
+					<a class="feed-item" href="./fswecnme.html">
 						<div>
-							<img src="./thumb/icon.png" alt="article icon" />
-							<p class="pub-date">Month Date, Year</p>
+							<img src="./thumb/fswecnme.jpg" alt="article icon" />
+							<p class="pub-date">September 4, 2021</p>
 						</div>
 						<article>
-							<p><strong>Title</strong></p>
-							<p>
-								Description
-							</p>
+							<p><strong>First Squadron Wide Event: A Mini Expedition to the California Nebula!</strong></p>
+							<p>To initiate many more squadron wide events to come, the Landstrider Legion has announced a mini-expedition to the California Nebula, in celebration of the squadron's creation!</p>
 						</article>
-					</a> -->
+					</a>
 				</div>
 			</section>
 		</div>
