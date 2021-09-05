@@ -117,6 +117,10 @@ nav table:nth-of-type(2) img {
 	color: white;
 	text-decoration: underline;
 }
+.quote {
+	border-left:5px solid gray;
+	padding-left:20px;
+}
 /*FONTS*/
 @font-face {
 	font-family: AquireBold;
