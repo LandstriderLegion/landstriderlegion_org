@@ -163,6 +163,34 @@ nav table:nth-of-type(2) img {
 	background-attachment: fixed;
 	background-position: center;
 }
+/* NOSCRIPT */
+noscript {
+	position:fixed;
+	top:0;
+	z-index: 999;
+	left:0;
+	background-color:rgb(0,0,0);
+	height:100vh;
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+noscript h1 {
+	/* top: 50%; */
+	position: relative;
+	font-size: 120px;
+}
+noscript h2 {
+	/* top: 50%; */
+	position: relative;
+	margin: 0;
+	font-size: 36px;
+	font-family: Momcake;
+	text-align: center;
+	color: white;
+}
 /*FONTS*/
 @font-face {
 	font-family: AquireBold;
