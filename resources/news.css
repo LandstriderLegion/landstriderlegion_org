@@ -1,6 +1,11 @@
 body {
 	margin: 0px;
 	background-color: black;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	/* background-size: auto 100%; */
+	background-size: 100% auto;
 }
 nav {
 	top: 0;
@@ -103,6 +108,7 @@ nav table:nth-of-type(2) img {
 	display: block;
 	width: 100%;
 }
+.background {background-color:black;}
 .content {
 	padding-top: 30px !important;
 	padding: 100px;
