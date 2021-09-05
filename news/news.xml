@@ -4,7 +4,21 @@
 	<title>Landstrider Legion</title>
 	<link></link>
 	<description>The latest news and announcements from Landstrider Legion</description>
-	<lastBuildDate>Sun, 22 Aug 2021 16:15:00 GMT</lastBuildDate>
+	<lastBuildDate>Sun, 4 Sep 2021 4:30:00 GMT</lastBuildDate>
 	<language>en-us</language>
 </channel>
+<item>
+	<title>First Squadron Wide Event: A Mini Expedition to the California Nebula!</title>
+	<link>http://landstriderlegion.space/news/fswecnme.html</link>
+	<guid>http://landstriderlegion.space/news/fswecnme.html</guid>
+	<pubDate>Mon, 4 Sep 2021 4:30:00 GMT</pubDate>
+	<description>To initiate many more squadron wide events to come, the Landstrider Legion has announced a mini-expedition to the California Nebula, in celebration of the squadron's creation!</description>
+</item>
+<item>
+	<title>Update from CMDR Rex Ardem Regarding the Creation of the Landstrider Legion</title>
+	<link>http://landstriderlegion.space/news/ufrarsc.html</link>
+	<guid>http://landstriderlegion.space/news/ufrarsc.html</guid>
+	<pubDate>Mon, 3 Sep 2021 16:45:00 GMT</pubDate>
+	<description>Following the creation of the Landstrider Legion, squadron leader CMDR Rex Ardem has said the following...</description>
+</item>
 </rss>
