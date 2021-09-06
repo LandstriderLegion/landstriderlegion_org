@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Squadron Events | Landstrider Legion</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/resources/style.css" />
+		<link rel="icon" href="/resources/icon.png" sizes="192x192" />
+		<meta
+			name="description"
+			content="Established in 3307, the Landstrider Legion is a Generalist squadron committed to educating commanders in the secrets of the universe, honing them into Elite-caliber operators and masters of their crafts."
+		/>
+		<style>
+			img:not(nav img) {
+				height: 192px;
+			}
+			td a {
+				text-decoration: none;
+				display: block;
+			}
+			td a:hover {
+				text-decoration: none;
+			}
+			.background {
+				background-image: url(../images/background2.jpg);
+			}
+			#note {
+				margin: 0;
+				padding-left: 10px;
+				font-size: 16px;
+			}
+			#feed {
+				margin-left: 18%;
+				margin-right: 18%;
+				display: block
+			}
+			.pub-date {font-size:15px;}
+			.feed-item {
+				display:flex;
+				flex-direction: column;
+				row-gap:2%;
+				padding:2%;
+				border-left: none;
+				border-right: none;
+				border-bottom: 1px gray solid;
+				border-top: 1px gray solid;
+				margin-top: 10px;
+			}
+			.feed-item:hover {
+				text-decoration:none;
+				background-color: rgba(0,0,0,0.8);
+			}
+		</style>
+	</head>
+	<body>
+		<noscript>
+			<h1>This site requires JavaScript!</h1>
+			<h2>Please make sure you're using a modern browser with JavaScript enabled.</h2>
+		</noscript>
+		<header class="header">
+			<h1>Events</h1>
+		</header>
+		<div class="background">
+			<section class="maincontent">
+				<p id="note">Note: all times and dates are in 12 hour UTC time</p>
+				<div id="feed">
+					<template>
+						<a class="feed-item" href="link">
+							<p><strong>Title</strong></p>
+							<p>
+								<b>When:</b> date @ time<br>
+								<b>Where:</b> location / departing &#8594; arrival<br>
+								<b>Carriers/station:</b> carrier (ID) / station<br>
+								<b>Organizer(s):</b> CMDR name
+							</p>
+						</a>
+					</template>
+					<hr>
+					<h2 id="september-2021">September 2021</h2>
+					<!-- Mini Expedition to the California Nebula -->
+					<a class="feed-item" href="./2021/september/5-6.html">
+						<p><strong>Mini Expedition to the California Nebula!</strong></p>
+						<p>
+							<b>When:</b> September 5, 2021 @ 2:00p.m - September 6, 2021 @ 1:00a.m<br>
+							<b>Where:</b> V371 Normae &#8594; California Sector BA-A e6<br>
+							<b>Carriers/station:</b>Spaceship Neptune (V5K-TKG)<br>
+							<b>Organizer(s):</b> CMDR Sirius T. Dog
+						</p>
+					</a>
+				</div>
+			</section>
+		</div>
+		<script src="/resources/navbar.js"></script>
+	</body>
+</html>
