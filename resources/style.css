@@ -96,6 +96,7 @@ nav table:nth-of-type(2) img {
 	display:flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 .header h1 {
 	position: relative;

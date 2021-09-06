@@ -57,6 +57,10 @@ a:not(nav a):hover {
 	text-decoration: underline;
 	text-decoration-style: double;
 }
+nav th {
+	font-family:Momcake;
+	font-size:25px;
+}
 nav table:nth-of-type(1) {
 	display: inline-block;
 	left: 0;
@@ -86,6 +90,8 @@ nav table:nth-of-type(2) img {
 	display:flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+
 }
 .header h1 {
 	position: relative;
