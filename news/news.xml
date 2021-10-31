@@ -4,9 +4,16 @@
 	<title>Landstrider Legion</title>
 	<link></link>
 	<description>The latest news and announcements from Landstrider Legion</description>
-	<lastBuildDate>Tue, 28 Sep 2021 10:20:00 GMT</lastBuildDate>
+	<lastBuildDate>Tue, 25 Oct 2021 5:52:00 GMT</lastBuildDate>
 	<language>en-us</language>
 </channel>
+<item>
+	<title>"Landstrider Legion Jaunt to The Dot" Just Announced!</title>
+	<link>http://landstriderlegion.space/news/lljttd.html</link>
+	<guid>http://landstriderlegion.space/news/lljttd.html</guid>
+	<pubDate>Tue, 25 Oct 2021 12:52:00 GMT</pubDate>
+	<description>The squadron's first major expedition, this is a week long glorious trip to three beautiful sights in the east of the galaxy.</description>
+</item>
 <item>
 	<title>Landstrider Legion Begins BGS Operations</title>
 	<link>http://landstriderlegion.space/news/llbbgso.html</link>
