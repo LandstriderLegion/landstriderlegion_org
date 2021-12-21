@@ -161,6 +161,7 @@ nav table:nth-of-type(2) img {
 	background-size: 100% auto;
 	background-attachment: fixed;
 	background-position: center;
+	background-color:black;
 }
 /* NOSCRIPT */
 noscript {

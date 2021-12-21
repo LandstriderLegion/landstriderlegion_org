@@ -30,14 +30,16 @@
 			.pub-date {font-size:15px;}
 			.feed-item {
 				display:flex;
-				flex-direction: row;
-				column-gap: 2%;
+				flex-direction: column;
 				padding:2%;
 				border-left: none;
 				border-right: none;
 				border-bottom: 1px gray solid;
 				border-top: 1px gray solid;
 				margin-top: 10px;
+			}
+			.feed-item p {
+				margin:0.5em;
 			}
 			.feed-item:hover {
 				text-decoration:none;
@@ -59,30 +61,20 @@
 				<div id="feed">
 					<template>
 						<a class="feed-item" href="link">
-							<div>
-								<img src="./thumb/icon.png" alt="article icon" />
-								<p class="pub-date">Month Date, Year</p>
-							</div>
-							<article>
-								<p><strong>Title</strong></p>
-								<p>
-									Description
-								</p>
-							</article>
+							<p><strong>Title</strong></p>
+							<p>
+								Description
+							</p>
+							<p class="pub-date">Month Date, Year</p>
 						</a>
 					</template>
 					<!-- Landstrider Legion Jaunt to the Dot -->
 					<a class="feed-item" href="./lljttd.html">
-						<div>
-							<img src="/images/LLJTD.png" alt="article icon" />
-							<p class="pub-date">October 25, 3307</p>
-						</div>
-						<article>
-							<p><strong>"Landstrider Legion Jaunt to The Dot" Just Announced!</strong></p>
-							<p>
-								The squadron's first major expedition, this is a week long glorious trip to three beautiful sights in the east of the galaxy.
-							</p>
-						</article>
+						<p><strong>"Landstrider Legion Jaunt to The Dot" Just Announced!</strong></p>
+						<p>
+							The squadron's first major expedition, this is a week long glorious trip to three beautiful sights in the east of the galaxy.
+						</p>
+						<p class="pub-date">October 25, 3307</p>
 					</a>
 					<!-- Landstrider Legion Begins BGS Operations -->
 					<a class="feed-item" href="./llbbgso.html">
