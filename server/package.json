@@ -1,0 +1,22 @@
+{
+  "name": "landstrider-site_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LandstriderLegion/landstriderlegion_org.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LandstriderLegion/landstriderlegion_org/issues"
+  },
+  "homepage": "https://github.com/LandstriderLegion/landstriderlegion_org#readme",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pm2": "^5.1.2"
+  }
+}
