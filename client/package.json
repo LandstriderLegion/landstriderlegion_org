@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npx prodbuild build",
     "test": "npx prodbuild serve"
   },
   "repository": {
