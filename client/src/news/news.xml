@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Landstrider Legion</title>
+		<link></link>
+		<description>The latest news and announcements from Landstrider Legion</description>
+		<lastBuildDate>Mon, 25 Oct 2021 5:52:00 GMT</lastBuildDate>
+		<language>en-us</language>
+	</channel>
+	<item>
+		<title>"Landstrider Legion Jaunt to The Dot" Just Announced!</title>
+		<link>http://landstriderlegion.space/news/lljttd.html</link>
+		<guid>http://landstriderlegion.space/news/lljttd.html</guid>
+		<enclosure url="/images/LLJTD.png" lenght="39238" type="image/png"></enclosure>
+		<pubDate>Mon, 25 Oct 2021 12:52:00 GMT</pubDate>
+		<description>The squadron's first major expedition, this is a week long glorious trip to three beautiful sights in the east of the galaxy.</description>
+	</item>
+	<item>
+		<title>Landstrider Legion Begins BGS Operations</title>
+		<link>http://landstriderlegion.space/news/llbbgso.html</link>
+		<guid>http://landstriderlegion.space/news/llbbgso.html</guid>
+		<pubDate>Tue, 28 Sep 2021 10:20:00 GMT</pubDate>
+		<description>As the squadron continues continues a steady growth, the next steps have been taken by the Order of Imperators to begin the minor faction application process.</description>
+	</item>
+	<item>
+		<title>First Squadron Wide Event: A Mini Expedition to the California Nebula!</title>
+		<link>http://landstriderlegion.space/news/fswecnme.html</link>
+		<guid>http://landstriderlegion.space/news/fswecnme.html</guid>
+		<pubDate>Mon, 4 Sep 2021 4:30:00 GMT</pubDate>
+		<description>To initiate many more squadron wide events to come, the Landstrider Legion has announced a mini-expedition to the California Nebula, in celebration of the squadron's creation!</description>
+	</item>
+	<item>
+		<title>Update from CMDR Rex Ardem Regarding the Creation of the Landstrider Legion</title>
+		<link>http://landstriderlegion.space/news/ufrarsc.html</link>
+		<guid>http://landstriderlegion.space/news/ufrarsc.html</guid>
+		<pubDate>Mon, 3 Sep 2021 16:45:00 GMT</pubDate>
+		<description>Following the creation of the Landstrider Legion, squadron leader CMDR Rex Ardem has said the following...</description>
+	</item>
+</rss>

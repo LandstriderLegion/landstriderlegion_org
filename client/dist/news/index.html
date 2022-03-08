@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Latest News &amp; Announcements | Landstrider Legion</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="/resources/style.css">
+		<link rel="icon" href="/resources/icon.png" sizes="192x192">
+		<meta name="description" content="Established in 3307, the Landstrider Legion is a Generalist squadron committed to educating commanders in the secrets of the universe, honing them into Elite-caliber operators and masters of their crafts.">
+		<style>
+			img:not(nav img) {
+				height: 192px;
+			}
+			.background {
+				background-image: url(../images/background2.jpg);
+			}
+			#rss-link {
+				margin: 0;
+				padding-left: 10px;
+				font-size: 16px;
+			}
+			#feed {
+				margin-left: 18%;
+				margin-right: 18%;
+				display: block
+			}
+			.pub-date {font-size:15px;}
+			.feed-item {
+				display:flex;
+				flex-direction: column;
+				padding:2%;
+				border-left: none;
+				border-right: none;
+				border-bottom: 1px gray solid;
+				border-top: 1px gray solid;
+				margin-top: 10px;
+			}
+			.feed-item p {
+				margin:0.5em;
+			}
+			.feed-item:hover {
+				text-decoration:none;
+				background-color: rgba(0,0,0,0.8);
+			}
+		</style>
+	</head>
+	<body>
+		<noscript>
+			<h1>This site requires JavaScript!</h1>
+			<h2>Please make sure you're using a modern browser with JavaScript enabled.</h2>
+		</noscript>
+		<header class="header">
+			<h1>News and Updates</h1>
+		</header>
+		<div class="background">
+			<section class="maincontent">
+				<p id="rss-link"><a target="_blank" href="news.xml">RSS Feed</a></p>
+				<div id="feed">
+					<template>
+						<a class="feed-item" href="link">
+							<p><strong>Title</strong></p>
+							<p>
+								Description
+							</p>
+							<p class="pub-date">Month Date, Year</p>
+						</a>
+					</template>
+					
+					<a class="feed-item" href="./lljttd.html">
+						<p><strong>"Landstrider Legion Jaunt to The Dot" Just Announced!</strong></p>
+						<p>
+							The squadron's first major expedition, this is a week long glorious trip to three beautiful sights in the east of the galaxy.
+						</p>
+						<p class="pub-date">October 25, 3307</p>
+					</a>
+					
+					<a class="feed-item" href="./llbbgso.html">
+						<div>
+							<img src="/resources/icon.png" alt="article icon">
+							<p class="pub-date">September 28, 3307</p>
+						</div>
+						<article>
+							<p><strong>Landstrider Legion Begins BGS Operations</strong></p>
+							<p>
+								As the squadron continues continues a steady growth, the next steps have been taken by the Order of Imperators to begin the minor faction application process.
+							</p>
+						</article>
+					</a>
+      			
+					<a class="feed-item" href="./fswecnme.html">
+						<div>
+							<img src="./thumb/fswecnme.jpg" alt="article icon">
+							<p class="pub-date">September 4, 3307</p>
+						</div>
+						<article>
+							<p><strong>First Squadron Wide Event: A Mini Expedition to the California Nebula!</strong></p>
+							<p>To initiate many more squadron wide events to come, the Landstrider Legion has announced a mini-expedition to the California Nebula, in celebration of the squadron's creation!</p>
+						</article>
+					</a>
+					
+					<a class="feed-item" href="./ufrarsc.html">
+						<div>
+							<img src="/resources/icon.png" alt="article icon">
+							<p class="pub-date">September 3, 3307</p>
+						</div>
+						<article>
+							<p><strong>Update from CMDR Rex Ardem Regarding the Creation of the Landstrider Legion</strong></p>
+							<p>Following the creation of the Landstrider Legion, squadron leader CMDR Rex Ardem has said the following...</p>
+						</article>
+					</a>
+				</div>
+			</section>
+		</div>
+		<script src="/resources/navbar.js"></script>
+	</body>
+</html>
