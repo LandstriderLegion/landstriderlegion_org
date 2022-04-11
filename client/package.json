@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npx prodbuild build",
-    "test": "npx prodbuild serve"
+    "test:start": "npx prodbuild serve start",
+    "test:stop": "npx prodbuild serve kill"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,6 @@
   },
   "homepage": "https://github.com/LandstriderLegion/landstriderlegion_org#readme",
   "devDependencies": {
-    "prodbuild": "^1.6.2"
+    "prodbuild": "^1.6.3"
   }
 }
