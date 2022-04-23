@@ -3,9 +3,8 @@ FROM ubuntu:20.04
 RUN apt update && apt install -y \
     curl \
     sudo \
-    nginx \
-    systemctl
-RUN mkdir /var/server/
+    nginx
+RUN mkdir /var/server/ && touch /var/www/error.log
 
 RUN rm /etc/nginx/nginx.conf
 
@@ -17,7 +16,7 @@ RUN apt install -y \
 # Move files
 COPY ./client/ /var/www/
 COPY ./server/ /var/server/
-COPY ./server/nginx.conf ./etc/nginx/
+COPY ./server/nginx.conf /etc/nginx/
 
 # Setup node/npm
 WORKDIR /var/www/
@@ -26,8 +25,8 @@ WORKDIR /var/server
 RUN npm install
 
 # Start node server and nginx
-CMD ["node", "index.js", "&&", "systemctl", "start", "nginx"]
+CMD ["bash", "start.sh"]
 EXPOSE 80 3000
 
 # docker build -t landstrider_site .
-# docker run landstrider_site -d
+# docker run -p 80:80 -p 3000:3000 -d --name landstrider_site landstrider_site
