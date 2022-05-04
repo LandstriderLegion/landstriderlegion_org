@@ -30,3 +30,4 @@ EXPOSE 80 3000
 
 # docker build -t landstrider_site .
 # docker run -p 80:80 -p 3000:3000 -d --name landstrider_site landstrider_site
+# sudo docker kill landstrider_site && sudo docker rm landstrider_site
