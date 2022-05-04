@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/LandstriderLegion/landstriderlegion_org#readme",
   "devDependencies": {
-    "prodbuild": "^1.6.3"
+    "prodbuild": "^1.6.4"
   }
 }

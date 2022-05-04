@@ -194,13 +194,13 @@ noscript h2 {
 /*FONTS*/
 @font-face {
 	font-family: AquireBold;
-	src: url("./fonts/AquireBold.otf");
+	src: url("./fonts/AquireBold.woff2") format('woff2');
 }
 @font-face {
 	font-family: Momcake;
-	src: url("./fonts/MomcakeThin.otf");
+	src: url("./fonts/MomcakeThin.woff2") format('woff2');
 }
 @font-face {
 	font-family: SegoeUI;
-	src: url("./fonts/Segoe-UI.ttf");
+	src: url("./fonts/Segoe-UI.woff2") format('woff2');
 }

@@ -1,5 +1,6 @@
 {
    "entry": "./src/",
    "output": "./dist",
-   "port": "5100"
+   "port": "5100",
+   "exclude": [".otf", ".ttf"]
 }
