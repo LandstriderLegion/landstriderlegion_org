@@ -31,6 +31,7 @@ RUN npm install
 CMD ["bash", "start.sh"]
 EXPOSE 80 3000 3001 5000
 
-# docker build -t landstrider_site .
-# docker run -p 80:80 -p 3000:3000 -p 3001:3001 -p 5000:5000 -d --name landstrider_site landstrider_site
-# sudo docker kill landstrider_site && sudo docker rm landstrider_site
+# BUILD:    docker build -t landstrider_site .
+# DEBUG:    docker run -p 80:80 -p 3000:3000 -p 3001:3001 -p 5000:5000 -d --name landstrider_site landstrider_site
+# PROD:     sudo docker run -p 80:80 -d --name landstrider_site landstrider_site
+# SHUTDOWN: sudo docker kill landstrider_site && sudo docker rm landstrider_site
