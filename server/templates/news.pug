@@ -1,0 +1,19 @@
+doctype html 
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/resources/news.css")
+        link(rel="icon", href="/resources/icon.png")
+        title #{title} | News & Updates - Landstrider Legion
+        meta(name="description", content=description)
+    body 
+        noscript 
+            h1 This site requires JavaScript!
+            h2 Please make sure you're using a modern browser with JavaScript enabled.
+        header(class="header")
+            h1 #{title}
+        div(class="background")
+            section(class="maincontent")
+                div(class="content") !{content}
+        script(src="/resources/navbar.js")
