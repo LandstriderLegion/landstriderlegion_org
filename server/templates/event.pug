@@ -1,6 +1,7 @@
 //- Format:
     title = article title
     description = article description
+    content = article content
     date = date/time
     place = location
     docks = places to dock
@@ -25,7 +26,7 @@ html(lang="en")
             h1 #{title}
         div(class="background")
             section(class="maincontent")
-                div(class="content")
+                div(class="content") !{content}
                     h2#details Details 
                     p. 
                         <b>When:</b> #{date}<br>
