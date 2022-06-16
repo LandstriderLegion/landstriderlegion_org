@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(href="/resources/news.css", rel="stylesheet")
+        link(href="/resources/feed.css", rel="stylesheet")
+        link(rel="icon", href="/resources/icon.png")
+        title #{feed} - Landstrider Legion
+        meta(name="description", content="The latest " + feed.toLowerCase() + " from the Landstrider Legion.")
+    body
+        noscript 
+            h1 This site requires JavaScript!
+            h2 Please make sure you're using a modern browser with JavaScript enabled.
+        header(class="header")
+            h1 #{feed}
+        div(class="background")
+            section(class="maincontent")
+                p(id="rss-link")
+                    a(target="_blank", href="./rss") RSS Feed 
+                div(id="feed") #{feedItems}
+        script(src="/resources/navbar.js")
+
