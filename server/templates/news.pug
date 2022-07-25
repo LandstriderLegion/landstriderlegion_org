@@ -1,3 +1,10 @@
+//- Format:
+    title = article title
+    description = article description
+    content = article content
+    date = date
+
+
 doctype html 
 html(lang="en")
     head
@@ -13,6 +20,7 @@ html(lang="en")
             h2 Please make sure you're using a modern browser with JavaScript enabled.
         header(class="header")
             h1 #{title}
+            p(id="date") #{date}
         div(class="background")
             section(class="maincontent")
                 div(class="content") !{content}
