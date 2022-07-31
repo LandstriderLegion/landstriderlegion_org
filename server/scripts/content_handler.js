@@ -22,22 +22,27 @@ const templates = {
 
 
 http.createServer((req, res) => {
-   res.writeHead(200, {'Content-type': 'application/json'});
 
    var cat = req.url.split('/')[1]
 
-   if (cat == "news") {
-      var content = await db.news.findOne({ id: req.url.split('/')[2] })
-      var article = templates.news({
-         title: content.title,
-         description: content.desc,
-         content: content.content,
-         date: content.pub
-      })
-
-      res.write(article)
+   try {
+      if (cat == "news") {
+         var content = await db.news.findOne({ id: req.url.split('/')[2] })
+         var article = templates.news({
+            title: content.title,
+            description: content.desc,
+            content: content.content,
+            date: content.pub
+         })
+      } else if (cat == "events") {
+         var content = await db.events.findOne({ id: req.url.split('/')[3], date: { year: req.url.split[2] }});
+      }
+      res.writeHead(200, {'Content-type': 'text/html'});
+   } catch(error) {
+      res.writeHead(404, {'Content-type': 'text/html'});
    }
 
+   res.write(article)
    res.end();
    console.log('Processed request');
 }).listen(3001);
