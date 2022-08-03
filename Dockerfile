@@ -4,7 +4,8 @@ RUN apt update && apt install -y \
     wget \
     nginx \
     gnupg \
-    && mkdir /var/server/ /data/ /data/db/ && touch /var/server/error.log && rm /etc/nginx/nginx.conf
+    && mkdir /var/server/ /var/logs /var/logs/scripts /data/ /data/db/  && rm /etc/nginx/nginx.conf \
+    && touch /var/logs/nginx.log /var/logs/mongo.log /var/logs/scripts/api.log /var/logs/scripts/content.log /var/logs/scripts/db.log
 
 # Install node & npm & mongodb
 RUN wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | apt-key add - \
@@ -27,10 +28,9 @@ RUN npm install
 
 # Start site
 CMD ["bash", "start.sh"]
-EXPOSE 80 3000 3001 5000
+EXPOSE 80
 
 
 # BUILD:    docker build -t landstrider_site .
-# DEBUG:    docker run -p 80:80 -p 3000:3000 -p 3001:3001 -p 5000:5000 -d --name landstrider_site landstrider_site
-# PROD:     sudo docker run -p 80:80 -d --name landstrider_site --mount type=volume,source=db-data,target=/data/db landstrider_site
+# RUN:      sudo docker run -p 80:80 -d -t --name landstrider_site --mount type=volume,source=db-data,target=/data/db landstrider_site
 # SHUTDOWN: sudo docker kill landstrider_site && sudo docker rm landstrider_site
