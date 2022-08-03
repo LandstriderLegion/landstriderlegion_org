@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^18.6.3",
+    "@types/pug": "^2.0.6",
     "mongodb": "^4.5.0",
     "pm2": "^5.2.0",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "typescript": "^4.7.4"
   }
 }

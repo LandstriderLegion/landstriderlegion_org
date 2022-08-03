@@ -24,7 +24,7 @@ COPY ./server/nginx.conf /etc/nginx/
 WORKDIR /var/www/
 RUN npm install && npm run build 
 WORKDIR /var/server
-RUN npm install
+RUN npm install && npm run build
 
 # Start site
 CMD ["bash", "start.sh"]
