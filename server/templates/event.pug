@@ -6,8 +6,6 @@
     place = location
     docks = places to dock
     org = organizers of event
-    info = additional info
-    updates = update messages
 
 doctype html
 html(lang="en")
@@ -26,12 +24,14 @@ html(lang="en")
             h1 #{title}
         div(class="background")
             section(class="maincontent")
-                div(class="content") !{content}
+                div(class="content")
                     h2#details Details 
                     p. 
                         <b>When:</b> #{date}<br>
                         <b>Where:</b> #{place}<br>
                         <b>Carrier(s)/station(s)</b> #{docks}<br>
                         <b>Organizer(s): </b> #{org}
+                    h2#info Information
+                    !{content}
 
         script(src="/resources/navbar.js")
