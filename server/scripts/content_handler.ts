@@ -7,27 +7,19 @@ interface dbCollection {
    [key: string]: mongo.Collection
 };
 
-// Error page
-var errorPage: string;
-require('fs').readFile('../pages/error.html', (err: Error, data: Buffer) => {
-   if (err) console.error(err);
-   errorPage = data.toString('utf8');
-});
-
 console.log('Content Handler running on port 3001');
 
 // Connect content database
 var db: dbCollection;
 const mongoClient: mongo.MongoClient = new mongo.MongoClient(dbUrl);
 mongoClient.connect((err, client) => {
-   if (err) throw err;
    if (client) {
       const database = client.db('content');
       db = { 
          events: database.collection('events'), 
          news: database.collection('news')
       };
-   } else throw 'NO DATABASE';
+   } else throw err;
 });
 
 // Compile templates
@@ -40,7 +32,7 @@ const templates = {
 http.createServer(async (req, res) => {
    var url = req.url!.split('/');
 
-   var article: string = 'article';
+   var article: string = "";
    try {
       if (url[1] == "news") {
          var content = await db.news.findOne({ id: url[2] });
@@ -72,7 +64,7 @@ http.createServer(async (req, res) => {
       res.writeHead(200, {'Content-type': 'text/html'});
    } catch(error) {
       res.writeHead(404, {'Content-type': 'text/html'});
-      var article = errorPage;
+      res.write(error);
    }
 
    res.write(article);

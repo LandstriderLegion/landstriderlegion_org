@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish an Article | Landstrider Legion</title>
+    <style>
+        body {
+            background-color: rgb(170, 98, 56);
+        }
+        h1 {
+        	margin: 0;
+        	font-size: 60px;
+        	font-family: AquireBold;
+        	text-align: center;
+        	color: white;
+
+        }
+        
+        form {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        /*FONTS*/
+        @font-face {
+        	font-family: AquireBold;
+        	src: url("/resources/fonts/AquireBold.woff2") format('woff2');
+        }
+        @font-face {
+        	font-family: Momcake;
+        	src: url("/resources/fonts/MomcakeThin.woff2") format('woff2');
+        }
+        @font-face {
+        	font-family: SegoeUI;
+        	src: url("/resources/fonts/Segoe-UI.woff2") format('woff2');
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Landstrider Legion Content Creation System</h1> -->
+    <h1>Test Form</h1>
+    <form id="editor" action="/publish/api">
+        <label>Article type:</label>
+        <select title="article type" id="type">
+            <option>Event</option>
+            <option>News</option>
+        </select>
+    </form>
+</body>
+</html>
