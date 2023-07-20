@@ -97,18 +97,22 @@
 			}, 4000)
 
 			// Scrolling animation
+			var height = header.offsetHeight;
 			window.addEventListener("scroll", () => {
 				var scrollTop = document.documentElement.scrollTop;
 				var distanceTop = window.pageYOffset + tracker.getBoundingClientRect().top;
-				var height = header.offsetHeight;
-				var opacity = 1;
+				var opacity = 1.0;
 
 				
-				if (scrollTop > distanceTop && opacity >= 0) {
+				if (scrollTop > distanceTop) {
 					console.log()
 					opacity = 1 - ((scrollTop - distanceTop) / height);
 				}
-				header.style.opacity = opacity;
+				console.log(opacity)
+				if (opacity >= 0) header.style.opacity = opacity;
+				
+				if (opacity <= 0) header.style.display = "none";
+				else header.style.display = "block";
 			})
 		</script>
 	</body>
