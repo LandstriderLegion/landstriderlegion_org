@@ -27,10 +27,22 @@
 				<h2><span id="heading-subtext">For the glory of The Legion. Welcome, commander.</span><span id="cursor">_</span></h2>
 			</div>
 		</header>
+		<main>
+			<div id="scroll-tracker"></div>
+			<h2>About Us</h2>
+			<p>
+				Established in 3307, the Landstrider Legion is a Generalist squadron committed to educating commanders in the secrets of the universe, honing them into Elite-caliber operators and masters of their crafts.
+			</p>
+			<p>
+				Whether you’re a brand new commander looking to find your way in the galaxy, a veteran star-hopper flying out of the mailslot backwards, or just looking for an active community to play with, the Legion invites you to join our community and our journey for interstellar glory.
+			</p>
+		</main>
 		<script>
 			var overlay = document.getElementById("overlay");
 			var sub = document.getElementById("heading-subtext");
-			var cursor = document.getElementById("cursor")
+			var cursor = document.getElementById("cursor");
+			var header = document.getElementsByTagName("header")[0];
+			var tracker = document.getElementById("scroll-tracker")
 
 			sub.innerText = "";
 
@@ -83,6 +95,21 @@
 					typed = true;
 				}, 5000)
 			}, 4000)
+
+			// Scrolling animation
+			window.addEventListener("scroll", () => {
+				var scrollTop = document.documentElement.scrollTop;
+				var distanceTop = window.pageYOffset + tracker.getBoundingClientRect().top;
+				var height = header.offsetHeight;
+				var opacity = 1;
+
+				
+				if (scrollTop > distanceTop && opacity >= 0) {
+					console.log()
+					opacity = 1 - ((scrollTop - distanceTop) / height);
+				}
+				header.style.opacity = opacity;
+			})
 		</script>
 	</body>
 	<!-- <body>
@@ -97,12 +124,7 @@
 			<section class="maincontent">
 				<div class="content">
 					<h1>About Us</h1>
-					<p>
-						Established in 3307, the Landstrider Legion is a Generalist squadron committed to educating commanders in the secrets of the universe, honing them into Elite-caliber operators and masters of their crafts.
-					</p>
-					<p>
-						Whether you’re a brand new commander looking to find your way in the galaxy, a veteran star-hopper flying out of the mailslot backwards, or just looking for an active community to play with, the Legion invites you to join our community and our journey for interstellar glory.
-					</p>
+					
 				</div>
 				<div class="content">
 					<h1>Bulletin Board</h1>

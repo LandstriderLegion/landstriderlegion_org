@@ -54,6 +54,9 @@ strong {
 header {
 	width: 100vw;
 	height: 100vh;
+	position:fixed;
+	top: 0;
+	left:0;
 }
 
 #video-wrapper {
@@ -104,6 +107,17 @@ header video {
 	width:100%;
 }
 
+main {
+	background-color: black;
+	height: 5000px;
+}
+
+#scroll-tracker {
+	display:block;
+	height:100vh;
+	margin-bottom: 110vh;
+}
+
 /* th {
 	font-family: SegoeUI;
 	font-weight: 1000;
@@ -148,27 +162,6 @@ nav table:nth-of-type(2) img {
 	align-items: center;
 	justify-content: center;
 	gap: 5px;
-}
-.header {
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.65);
-	width: 100%;
-	display:flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-.header h1 {
-	position: relative;
-	font-size: 120px;
-}
-.header h2 {
-	position: relative;
-	margin: 0;
-	font-size: 36px;
-	font-family: Momcake;
-	text-align: center;
-	color: white;
 }
 .maincontent {
 	background-color: rgba(0, 0, 0, 0.7);
