@@ -13,3 +13,20 @@ services:
     restart: always
     volumes:
       - mongodb:/data/db
+  wiki:
+    image: mediawiki
+    restart: always
+    volumes:
+      - static:/var/ww/html/
+  wikiSQL:
+    image: mysql
+    restart: always
+    volumes:
+      - sql:/var/lib/mysql
+volumes:
+  static:
+  mongodb:
+  sql:
+networks:
+  siteBridge:
+    driver: bridge
