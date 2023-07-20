@@ -11,9 +11,80 @@
 			content="Established in 3307, the Landstrider Legion is a Generalist squadron committed to educating commanders in the secrets of the universe, honing them into Elite-caliber operators and masters of their crafts."
 		/>
 	</head>
-		<video style="width:100%;" autoplay>
-			<source src="./resources/media/cobra_cruise.mp4">
-		</video>
+	<body>
+		<nav>
+			Home
+		</nav>
+		<header>
+			<div id="video-wrapper">
+				<video autoplay muted loop>
+					<source src="./resources/media/background.mp4">
+				</video>
+			</div>
+			<div id="overlay">
+				<img alt="logo" src="./resources/icon.png">
+				<h1>Landstrider Legion</h1>
+				<h2><span id="heading-subtext">For the glory of The Legion. Welcome, commander.</span><span id="cursor">_</span></h2>
+			</div>
+		</header>
+		<script>
+			var overlay = document.getElementById("overlay");
+			var sub = document.getElementById("heading-subtext");
+			var cursor = document.getElementById("cursor")
+
+			sub.innerText = "";
+
+			// Fade in
+			setTimeout(() => {
+				overlay.style.opacity = "100%";
+			}, 1000)
+
+			// Typing text
+			var typed = false;
+			var text = ""
+			var strings = [
+					"For the glory of the Legion.",
+					" Welcome,",
+					" commander."
+				]
+
+			var cursorAnim = setInterval(() => {
+				if (!typed) {
+					cursor.style.opacity = "100%";
+					setTimeout(() => {
+						cursor.style.opacity = "0%";
+					}, 600)
+				} else {
+					clearInterval(cursorAnim);
+					cursor.style.opacity = "0";
+				}
+			}, 1200)
+
+			function typeText(string, int) {
+				var i = 0;
+				var interval = setInterval(() => {
+					if (i < string.length) {
+						text += string[i];
+						sub.innerText = text;
+						i++
+					} else clearInterval(interval)
+				},int)
+			}
+
+			setTimeout(async () => {
+				typeText(strings[0], 40);
+				setTimeout(() => {
+					typeText(strings[1], 50);
+				},2300)
+				setTimeout(() => {
+					typeText(strings[2], 65)
+				},3500)
+				setTimeout(() => {
+					typed = true;
+				}, 5000)
+			}, 4000)
+		</script>
+	</body>
 	<!-- <body>
 		<noscript>
 			<h1>This site requires JavaScript!</h1>
