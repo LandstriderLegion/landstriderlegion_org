@@ -294,27 +294,14 @@ nav table:nth-of-type(2) img {
 noscript {
 	position:fixed;
 	z-index: 999;
+	bottom: 0;
 	left:0;
+	width: 100%;
 	background-color:rgb(0,0,0);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	display: block;
+	padding: 0.2rem 2rem;
 }
-noscript h1 {
-	/* top: 50%; */
-	position: relative;
-	font-size: 120px;
-}
-noscript h2 {
-	/* top: 50%; */
-	position: relative;
-	margin: 0;
-	font-size: 36px;
-	font-family: Momcake;
-	text-align: center;
-	color: white;
-}
+
 /*FONTS*/
 @font-face {
 	font-family: AquireBold;
