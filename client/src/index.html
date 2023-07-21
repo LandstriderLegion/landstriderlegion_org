@@ -64,6 +64,9 @@
 
 			// Set all styles for animations
 			sub.innerText = "";
+			logo.style.opacity = "0";
+			overlay.style.opacity = "0";
+			overlay.style.display = "fixed";
 
 			// Fade in
 			setTimeout(() => {
@@ -75,10 +78,10 @@
 			var typed = false;
 			var text = ""
 			var strings = [
-					"For the glory of the Legion.",
-					" Welcome,",
-					" commander."
-				]
+				"For the glory of the Legion.",
+				" Welcome,",
+				" commander."
+			]
 
 			var cursorAnim = setInterval(() => {
 				if (!typed) {
