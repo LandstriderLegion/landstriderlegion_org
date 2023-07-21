@@ -16,10 +16,21 @@ body {
 nav {
 	top: 0;
 	position: fixed;
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: rgb(0, 0, 0);
 	width: 100%;
 	z-index: 99;
+	display: grid;
+	grid-template-columns: 25% 75%;
+	font-family:Momcake;
+	font-size:25px;
+	font-weight: bold;
+	color: white;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+
 }
+
 h1 {
 	margin: 0;
 	font-size: 5rem;
@@ -50,6 +61,38 @@ strong {
 	font-size: 1.5rem;
 }
 
+#nav-right {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: end;
+	align-items: center;
+}
+
+nav a {
+	margin: 0.7rem 1.6rem;
+	color: rgb(220,220,220);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+/* nav a:hover::after {
+	text-decoration: none;
+}
+
+#nav-right a:not(:last-of-type) {
+	margin-right: 0rem;
+}
+
+#nav-right a:not(:last-of-type)::after {
+	content: "|";
+	margin-left:1.6rem;
+	text-decoration: none;
+} */
 
 header {
 	width: 100vw;
@@ -150,11 +193,13 @@ main {
 }
 
 .content-grid img {
-	width: 100%;
+	width: 94%;
+	margin-left: 3%;
+	margin-right:3%;
 }
 
 .grid-container {
-
+	padding: 1.7rem;
 }
 
 /* th {
@@ -177,8 +222,7 @@ a:hover {
 	text-decoration: underline;
 }
 nav th {
-	font-family:Momcake;
-	font-size:25px;
+	
 }
 nav table:nth-of-type(1) {
 	display: inline-block;
