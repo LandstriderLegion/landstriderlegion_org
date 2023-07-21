@@ -57,6 +57,7 @@ header {
 	position:fixed;
 	top: 0;
 	left:0;
+	z-index:49
 }
 
 #video-wrapper {
@@ -66,6 +67,7 @@ header {
 	align-items: center;
 	overflow: hidden;
 	height: 100vh;
+	z-index:50;
 }
 
 #overlay {
@@ -81,9 +83,8 @@ header {
 	/* justify-content: center; */
 	align-items: center;
 	gap: 4rem;
-
-	opacity: 0;
-	transition: 2.5s opacity ease-in-out;
+	padding-top: 57vh;
+	z-index:52
 }
 
 #overlay h1 {
@@ -98,9 +99,14 @@ header {
 	font-weight: bold;
 }
 
-#overlay img {
+#header-logo {
+	top: 11%;
 	width:20%;
-	margin-top:5.5%;
+	/* margin-top:5.5%; */
+	z-index: 60;
+	margin-left: 40%;
+	margin-right: 40%;
+	position: sticky;
 }
 
 header video {
@@ -108,7 +114,8 @@ header video {
 }
 
 main {
-	background-color: black;
+	/* background-color: black; */
+	background: linear-gradient(97deg, rgba(21,73,130,0.14) 2%, rgba(0,114,80,0.1) 23%, rgba(171,136,47,0.08) 53%, rgba(239,71,35,0.06) 91%);
 	height: 5000px;
 }
 
@@ -116,6 +123,38 @@ main {
 	display:block;
 	height:100vh;
 	margin-bottom: 110vh;
+}
+
+#logo-wrapper {
+	position: absolute;
+	height:200vh;
+	top:0;
+	width:100%;
+}
+
+#header-logo, #overlay {
+	opacity: 0;
+	transition: 2.5s opacity ease-in-out;
+}
+
+.content-wrapper {
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-bottom: 6%;
+}
+
+.content-grid {
+	display: grid;
+	grid-template-columns: 48.5% 48.5%;
+	gap:3%;
+}
+
+.content-grid img {
+	width: 100%;
+}
+
+.grid-container {
+
 }
 
 /* th {
@@ -162,18 +201,6 @@ nav table:nth-of-type(2) img {
 	align-items: center;
 	justify-content: center;
 	gap: 5px;
-}
-.maincontent {
-	background-color: rgba(0, 0, 0, 0.7);
-	display: block;
-	width: 100%;
-	padding-bottom: 40px;
-	min-height: 50vh;
-}
-.content {
-	padding-top: 30px !important;
-	padding: 100px;
-	color: white;
 }
 .table {
 	padding: 5px;

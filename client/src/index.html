@@ -22,33 +22,48 @@
 				</video>
 			</div>
 			<div id="overlay">
-				<img alt="logo" src="./resources/icon.png">
 				<h1>Landstrider Legion</h1>
 				<h2><span id="heading-subtext">For the glory of The Legion. Welcome, commander.</span><span id="cursor">_</span></h2>
 			</div>
 		</header>
 		<main>
 			<div id="scroll-tracker"></div>
-			<h2>About Us</h2>
-			<p>
-				Established in 3307, the Landstrider Legion is a Generalist squadron committed to educating commanders in the secrets of the universe, honing them into Elite-caliber operators and masters of their crafts.
-			</p>
-			<p>
-				Whether you’re a brand new commander looking to find your way in the galaxy, a veteran star-hopper flying out of the mailslot backwards, or just looking for an active community to play with, the Legion invites you to join our community and our journey for interstellar glory.
-			</p>
+			<div id="logo-wrapper">
+				<img alt="logo" id="header-logo" src="./resources/icon.png">
+			</div>
+			<div class="content-wrapper">
+				<h2>About Us</h2>
+				<p>
+					Established in 3307, the Landstrider Legion is a Generalist squadron committed to educating commanders in the secrets of the universe, honing them into Elite-caliber operators and masters of their crafts.
+				</p>
+				<p>
+					Whether you're a brand new commander looking to find your way in the galaxy, a veteran star-hopper flying out of the mailslot backwards, or just looking for an active community to play with, the Legion invites you to join our community and our journey for interstellar glory.
+				</p>
+			</div>
+			<div class="content-wrapper content-grid">
+				<img src="./resources/icon.png" alt="">
+				<div class="grid-container">
+					<h2>Founded to be Different</h2>
+					<p>Tired of their dysfunctional, inactive squadron, eight Elite: Dangerous veterans teamed up to start a new squadron with three goals: professionalism, casualness, activeness.
+						<br>After several years, the squadron still holds those values close.
+					</p>
+				</div>
+			</div>
 		</main>
 		<script>
 			var overlay = document.getElementById("overlay");
+			var logo = document.getElementById("header-logo");
 			var sub = document.getElementById("heading-subtext");
 			var cursor = document.getElementById("cursor");
 			var header = document.getElementsByTagName("header")[0];
-			var tracker = document.getElementById("scroll-tracker")
+			var tracker = document.getElementById("scroll-tracker");
 
 			sub.innerText = "";
 
 			// Fade in
 			setTimeout(() => {
-				overlay.style.opacity = "100%";
+				overlay.style.opacity = "1";
+				logo.style.opacity = "1";
 			}, 1000)
 
 			// Typing text
