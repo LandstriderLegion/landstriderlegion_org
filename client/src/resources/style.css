@@ -188,7 +188,7 @@ main {
 	margin-bottom: 6%;
 }
 
-.content-grid  {
+.content-grid, .flex-container  {
 	margin-left: 22%;
 	margin-right: 22%;
 }
@@ -235,67 +235,51 @@ main {
 	user-select: none;
 }
 
-/* th {
-	font-family: 'SegoeUI';
-	font-weight: 1000;
-	color: white;
-	font-size: 20px;
-}
-td {
-	font-size: 20px;
-	font-family: 'SegoeUI';
-	font-weight: initial;
-	color: white;
-}
-a {
-	color: white;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
-.img-link {
+.flex-container {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	align-items: center;
-	justify-content: center;
-	gap: 5px;
+	gap: 5%;
+	margin-top: 1.6em;
 }
-.table {
-	padding: 5px;
-	border: 1px solid white;
-	border-collapse: collapse;
-}
-.button-container {
-	display: flex;
-	justify-content: center;
-	margin-top: 40px;
-}
-.button {
-	background-color: darkgray;
-	width: 30%;
-	padding: 10px;
+
+button {
+	border: none;
+	padding: 1.2em;
 	color: white;
-	font-family: 'AquireBold';
+	font-family: 'AquireReg';
+	font-size: 2rem;
 	text-align: center;
+	background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(50,50,50,0.5) 90%);
+	/* animation-name: button-idle;
+	animation-duration: 4s;
+	animation-iteration-count: infinite; */
 }
-.button:hover {
+button:hover {
 	background-color: lightgray;
 	text-decoration: none;
+	cursor: pointer;
 }
-.button p {
-	font-size: 50px;
-	font-weight: 500;
-	margin: 5px;
-	font-family: 'MomcakeThin';
-}
-.button:hover p {
-	color: black;
-}
-.button p:not(:first-of-type) {
-	font-size: 22px;
-} */
 
+footer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	bottom: 0;
+	left:0;
+	width: 100%;
+	padding: 0.9em 0;
+}
+
+footer p {
+	color: rgb(100,100,100);
+	font-size: 1rem;
+	text-align: center;
+	margin:0;
+}
 
 /* NOSCRIPT */
 noscript {
@@ -329,4 +313,17 @@ noscript {
 @font-face {
 	font-family: 'SegoeUI';
 	src: url("./fonts/Segoe-UI.ttf") format('truetype');
+}
+
+/* ANIMATIONS */
+@keyframes button-idle {
+	0% {
+		background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(50,50,50,0.5) 90%);
+	}
+	50% {
+		background: linear-gradient(180deg, rgba(0,0,0,0.5) 70%, rgba(20,20,20,0.5) 90%);
+	}
+	100% {
+		background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(50,50,50,0.5) 90%);
+	}
 }
