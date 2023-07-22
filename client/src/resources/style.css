@@ -21,7 +21,7 @@ nav {
 	z-index: 99;
 	display: grid;
 	grid-template-columns: 25% 75%;
-	font-family:Momcake;
+	font-family:'MomcakeBold';
 	font-size:25px;
 	font-weight: bold;
 	color: white;
@@ -34,29 +34,30 @@ nav {
 h1 {
 	margin: 0;
 	font-size: 5rem;
-	font-family: AquireBold;
+	font-family: 'AquireBold';
 	text-align: center;
 	color: white;
 }
 h2 {
-	font-size: 3.1rem;
+	font-size: 3.5rem;
 	margin: 0;
-	font-family: AquireBold;
+	font-family: 'AquireBold';
 	text-align: center;
 	color: white;
 }
 h3 {
-	font-size: 2.3rem;
-	font-family: Momcake;
+	font-size: 2.5rem;
+	font-family: 'AquireReg';
 	text-align: center;
 	color: white;
+	margin: 0;
 }
 p, li {
 	font-size: 1.25rem;
-	font-family: SegoeUI;
+	font-family: 'SegoeUI';
 	color: white;
 }
-strong {
+strong, b {
 	font-weight: bolder;
 	font-size: 1.5rem;
 }
@@ -95,7 +96,7 @@ nav a:hover {
 } */
 
 header {
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	position:absolute;
 	top: 0;
@@ -187,31 +188,62 @@ main {
 	margin-bottom: 6%;
 }
 
+.content-grid  {
+	margin-left: 22%;
+	margin-right: 22%;
+}
+
 .content-grid {
 	display: grid;
 	grid-template-columns: 48.5% 48.5%;
-	gap:3%;
-}
-
-.content-grid img {
-	width: 94%;
-	margin-left: 3%;
-	margin-right:3%;
+	gap:1%;
 }
 
 .grid-container {
 	padding: 1.7rem;
 }
 
+.content-grid .img-container {
+	width: 96%;
+	margin-left: 2%;
+	margin-right:2%;
+	position: relative;
+}
+
+.img-container img {
+	width: 100%;
+}
+
+.img-container .caption {
+	font-family: 'SegoeUI';
+	position: absolute;
+	bottom: 4%;
+	right: 3%;
+	color:white;
+	margin: 0;
+	font-size: 1rem;
+	text-shadow: 
+		2px 2px 4px black, 
+		-2px -2px 4px black,
+		-2px 2px 4px black,
+		2px -2px 4px black;
+}
+
+.img-container * {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
 /* th {
-	font-family: SegoeUI;
+	font-family: 'SegoeUI';
 	font-weight: 1000;
 	color: white;
 	font-size: 20px;
 }
 td {
 	font-size: 20px;
-	font-family: SegoeUI;
+	font-family: 'SegoeUI';
 	font-weight: initial;
 	color: white;
 }
@@ -221,24 +253,6 @@ a {
 }
 a:hover {
 	text-decoration: underline;
-}
-nav th {
-	
-}
-nav table:nth-of-type(1) {
-	display: inline-block;
-	left: 0;
-}
-nav table:nth-of-type(2) {
-	float: right;
-}
-nav table:nth-of-type(2) th {
-	padding: 10px;
-}
-nav table:nth-of-type(2) img {
-	height: 28px;
-	padding: 0;
-	margin: 0;
 }
 .img-link {
 	display: flex;
@@ -262,7 +276,7 @@ nav table:nth-of-type(2) img {
 	width: 30%;
 	padding: 10px;
 	color: white;
-	font-family: AquireBold;
+	font-family: 'AquireBold';
 	text-align: center;
 }
 .button:hover {
@@ -273,20 +287,13 @@ nav table:nth-of-type(2) img {
 	font-size: 50px;
 	font-weight: 500;
 	margin: 5px;
-	font-family: Momcake;
+	font-family: 'MomcakeThin';
 }
 .button:hover p {
 	color: black;
 }
 .button p:not(:first-of-type) {
 	font-size: 22px;
-}
-.background {
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	background-attachment: fixed;
-	background-position: center;
-	background-color:black;
 } */
 
 
@@ -304,14 +311,22 @@ noscript {
 
 /*FONTS*/
 @font-face {
-	font-family: AquireBold;
-	src: url("./fonts/AquireBold.woff2") format('woff2');
+	font-family: 'AquireBold';
+	src: url("./fonts/AquireBold.otf") format('opentype');
 }
 @font-face {
-	font-family: Momcake;
-	src: url("./fonts/MomcakeThin.woff2") format('woff2');
+	font-family: 'AquireReg';
+	src: url("./fonts/AquireRegular.otf") format('opentype');
 }
 @font-face {
-	font-family: SegoeUI;
-	src: url("./fonts/Segoe-UI.woff2") format('woff2');
+	font-family: 'MomcakeThin';
+	src: url("./fonts/MomcakeThin.otf") format('opentype');
+}
+@font-face {
+	font-family: 'MomcakeBold';
+	src: url("./fonts/MomcakeBold.otf") format('opentype');
+}
+@font-face {
+	font-family: 'SegoeUI';
+	src: url("./fonts/Segoe-UI.ttf") format('truetype');
 }

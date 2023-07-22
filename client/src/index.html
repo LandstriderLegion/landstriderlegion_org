@@ -53,11 +53,38 @@
 				</p>
 			</div>
 			<div class="content-wrapper content-grid">
-				<img src="./resources/icon.png" alt="">
+				<div class="img-container">
+					<img src="./images/land_group2.jpg" alt="picture of several of the legion's members, including all of their founders">
+					<p class="caption">CMDR Sirius T. Dog</p>
+				</div>
 				<div class="grid-container">
-					<h2>Founded to be Different</h2>
+					<h3>Founded to be Different</h3>
 					<p>Tired of their dysfunctional, inactive squadron, eight Elite: Dangerous veterans teamed up to start a new squadron with three goals: professionalism, casualness, activeness.
-						<br>After several years, the squadron still holds those values close.
+						<br>After several years, the squadron still emphasizes those values in all of their activities.
+					</p>
+				</div>
+			</div>
+			<div class="content-wrapper content-grid">
+				<div class="grid-container">
+					<h3>How We Got Here</h3>
+					<p>Leaving behind what they had spent years creating, hundreds of commanders left their home system of Apotanites to become Legionaires, and undertake the 300 light-year journey to the Legion's homesystem of Korotep.
+						<br>From there, the Legion prospored, becoming an active center of trading, combat, exploration, and BGS operations.
+					</p>
+				</div>
+				<div class="img-container">
+					<img src="./images/korotep_sunrise.png" alt="sunrise in Korotep">
+					<p class="caption">CMDR Burrito_Riot</p>
+				</div>
+			</div>
+			<div class="content-wrapper content-grid">
+				<div class="img-container">
+					<img src="./images/legion_ship.jpg" alt="Legion member standing in front of their ship">
+					<p class="caption">CMDR TishTech</p>
+				</div>
+				<div class="grid-container">
+					<h3>The Legion Way</h3>
+					<p>The Legion is here to compliments the skill sets of all commanders, whether they're the newest trader, or the most veteran fighter. Our wide spectrum of experience levels allows us to offer a plethora of different opportunities.
+						<br>Start the day by fighting pirates in one system, have lunch at one of our planetary ports, and finish the day dropping of cargo at one of our starports. There's something for everyone!
 					</p>
 				</div>
 			</div>
@@ -67,12 +94,13 @@
 			var logo = document.getElementById("header-logo");
 			var sub = document.getElementById("heading-subtext");
 			var cursor = document.getElementById("cursor");
+			var header = document.getElementsByTagName("header")[0];
 
 			// Set all styles for animations
 			sub.innerText = "";
 			logo.style.opacity = "0";
 			overlay.style.opacity = "0";
-			overlay.style.display = "fixed";
+			header.style.position = "fixed";
 
 			// Fade in
 			setTimeout(() => {
@@ -126,7 +154,6 @@
 			}, 4000)
 
 			// Scrolling animation
-			var header = document.getElementsByTagName("header")[0];
 			var tracker = document.getElementById("scroll-tracker");
 			var gradient = document.getElementsByTagName("main")[0];
 			var height = header.offsetHeight;
@@ -143,7 +170,7 @@
 					gradOpacity = opacity >= 0 ? 0 : (opacity <= -1 ? 1 : opacity * -1);
 					gradient.style.background = `linear-gradient(97deg, rgba(21,73,130,${0.14 * gradOpacity}) 2%, rgba(0,114,80,${0.1 * gradOpacity}) 23%, rgba(171,136,47,${0.08 * gradOpacity}) 53%, rgba(239,71,35,${0.06 * gradOpacity}) 91%)`;
 				}
-				console.log(opacity, gradOpacity)
+				// console.log(opacity, gradOpacity)
 				if (opacity >= 0) header.style.opacity = opacity;
 				
 				if (opacity <= 0) {
