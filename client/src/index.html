@@ -108,6 +108,7 @@
 			<p>Landstrider Legion &copy; 2023</p>
 			<p>Not endorsed or associated with Frontier Developments</p>
 		</footer>
+		<script src="./resources/animations.js"></script>
 		<script>
 			var overlay = document.getElementById("overlay");
 			var logo = document.getElementById("header-logo");
@@ -173,23 +174,14 @@
 			}, 4000)
 
 			// Scrolling animation
-			var tracker = document.getElementById("scroll-tracker");
-			var gradient = document.getElementsByTagName("main")[0];
-			var height = header.offsetHeight;
-			gradient.style.background = "black";
-
 			window.addEventListener("scroll", () => {
 				var scrollTop = document.documentElement.scrollTop;
 				var distanceTop = window.pageYOffset + tracker.getBoundingClientRect().top;
 				var opacity = 1.0;
-				var gradOpacity = 0
 				
 				if (scrollTop > distanceTop) {
 					opacity = 1 - ((scrollTop - distanceTop) / height);
-					gradOpacity = opacity >= 0 ? 0 : (opacity <= -1 ? 1 : opacity * -1);
-					gradient.style.background = `linear-gradient(97deg, rgba(21,73,130,${0.14 * gradOpacity}) 2%, rgba(0,114,80,${0.1 * gradOpacity}) 23%, rgba(171,136,47,${0.08 * gradOpacity}) 53%, rgba(239,71,35,${0.06 * gradOpacity}) 91%)`;
 				}
-				// console.log(opacity, gradOpacity)
 				if (opacity >= 0) header.style.opacity = opacity;
 				
 				if (opacity <= 0) {

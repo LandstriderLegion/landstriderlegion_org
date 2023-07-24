@@ -235,7 +235,8 @@ button {
 	background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(50,50,50,0.5) 90%);
 	/* animation-name: button-idle;
 	animation-duration: 4s;
-	animation-iteration-count: infinite; */
+	animation-iteration-count: infinite;
+	transition: background 3s; */
 }
 button:hover {
 	background-color: lightgray;
