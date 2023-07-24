@@ -20,21 +20,47 @@ window.addEventListener("scroll", () => {
 
 // Buttons
 const buttons = document.getElementsByTagName("button");
-const buttonGradAnim = setInterval(() => {
-    for (var i = 0; i < buttons.length; i++) {
-        console.log(buttons[i], buttons[i].style)
-        // Fade up
-        for (var l = 0; l < 30; l++) {
-            buttons[i].style.background = `linear-gradient(180deg, rgba(0,0,0,0.5) ${40 + l}%, rgba(${50 - l},${50 - l},${50 - l},0.5) 90%);`
-            setTimeout(() => {}, 83)
-        }
-
-        // Fade down
+var i;
+function buttonAnimationLoop() {
+    var l = 0;
+    // Fade up
+    function buttonFadeUp() {
         setTimeout(() => {
-            for (var l = 30; l > 0; l--) {
-                buttons[i].style.background = `linear-gradient(180deg, rgba(0,0,0,0.5) ${40 + l}%, rgba(${50 - l},${50 - l},${50 - l},0.5) 90%);`
-                setTimeout(() => {}, 83)
+            buttons[i].setAttribute(
+                "style",
+                `background: linear-gradient(180deg, rgba(0,0,0,0.5) ${40 + l}%, rgba(${50 - l},${50 - l},${50 - l},0.5) 90%);`
+            )
+            if (l >= 30) return;
+            else {
+                l++;
+                buttonFadeUp();
             }
-        }, 2500)
+        }, 83)
     }
-}, 5000)
+    buttonFadeUp();
+
+    // Fade down
+    function buttonFadeDown() {
+        setTimeout(() => {
+            buttons[i].setAttribute(
+                "style",
+                `background: linear-gradient(180deg, rgba(0,0,0,0.5) ${40 + l}%, rgba(${50 - l},${50 - l},${50 - l},0.5) 90%);`
+            )
+            if (l <= 0) return;
+            else {
+                l--;
+                buttonFadeDown();
+            }
+        }, 83)
+    }
+    setTimeout(() => {
+        buttonFadeDown();
+
+        if (i < buttons.length - 1) i++;
+        else {
+            i = 0;
+            return;
+        }
+    }, 3000)
+}
+setInterval(buttonAnimationLoop, 6000)
