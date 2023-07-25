@@ -1,5 +1,5 @@
 :root {
-	font-size: 16px;
+	font-size: 20px;
 }
 
 body {
@@ -26,38 +26,34 @@ nav {
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
-	padding-bottom:2rem;
+	padding-bottom:1.8rem;
 }
 
 h1 {
 	margin: 0;
-	font-size: 5rem;
+	font-size: 4rem;
 	font-family: 'AquireBold';
 	text-align: center;
 	color: white;
 }
 h2 {
-	font-size: 3.5rem;
+	font-size: 2.8rem;
 	margin: 0;
 	font-family: 'AquireBold';
 	text-align: center;
 	color: white;
 }
 h3 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	font-family: 'AquireReg';
 	text-align: center;
 	color: white;
 	margin: 0;
 }
 p, li {
-	font-size: 1.25rem;
+	font-size: 1rem;
 	font-family: 'SegoeUI';
 	color: white;
-}
-strong, b {
-	font-weight: bolder;
-	font-size: 1.5rem;
 }
 
 #nav-right {
@@ -69,7 +65,7 @@ strong, b {
 }
 
 nav a {
-	margin: 0.7rem 1.6rem;
+	margin: 0.6rem 1.3rem;
 	color: rgb(220,220,220);
 	text-decoration: none;
 	font-weight: bold;
@@ -95,6 +91,7 @@ header {
 	align-items: center;
 	overflow: hidden;
 	height: 100vh;
+	width:100%;
 	z-index:50;
 }
 
@@ -109,17 +106,17 @@ header {
 	flex-direction: column;
 	justify-content: start;
 	align-items: center;
-	gap: 4rem;
+	gap: 3.5rem;
 	padding-top: 57vh;
 	z-index:52
 }
 
 #overlay h1 {
-	font-size: 9.3rem;
+	font-size: 7.4rem;
 }
 
 #heading-subtext {
-	font-size: 2.4rem;
+	font-size: 1.9rem;
 }
 
 #cursor {
@@ -137,7 +134,11 @@ header {
 }
 
 header video {
-	width:100%;
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	height:auto;
+	position: absolute;
 }
 
 main {
@@ -176,7 +177,7 @@ main {
 }
 
 .grid-container {
-	padding: 1.7rem;
+	padding: 1.2rem;
 }
 
 .content-grid .img-container {
@@ -198,7 +199,7 @@ main {
 	right: 3%;
 	color:white;
 	margin: 0;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	text-shadow: 
 		2px 2px 4px black, 
 		-2px -2px 4px black,
@@ -226,7 +227,7 @@ button {
 	padding: 1.2em;
 	color: white;
 	font-family: 'AquireReg';
-	font-size: 2rem;
+	font-size: 1.8rem;
 	text-align: center;
 	background: rgb(0,0,0);
 }
@@ -289,4 +290,17 @@ noscript {
 @font-face {
 	font-family: 'SegoeUI';
 	src: url("./fonts/Segoe-UI.ttf") format('truetype');
+}
+
+/* RESPONSIVENESS */
+@media screen and (min-width:1250px) and (max-width:1920px) {
+	:root {
+		font-size:16px;
+	}
+}
+
+@media screen and (min-width:700px) and (max-width:1250px) {
+	:root {
+		font-size:13px;
+	}
 }
