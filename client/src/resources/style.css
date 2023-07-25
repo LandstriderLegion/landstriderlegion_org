@@ -158,10 +158,6 @@ main {
 	width:100%;
 }
 
-#header-logo, #overlay {
-	transition: 2.5s opacity ease-in-out;
-}
-
 .content-wrapper {
 	margin-left: 30%;
 	margin-right: 30%;
@@ -232,14 +228,11 @@ button {
 	font-family: 'AquireReg';
 	font-size: 2rem;
 	text-align: center;
-	background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(50,50,50,0.5) 90%);
-	/* animation-name: button-idle;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
-	transition: background 3s; */
+	background: rgb(0,0,0);
 }
+
 button:hover {
-	background-color: lightgray;
+	background: rgb(100,100,100);
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -295,17 +288,4 @@ noscript {
 @font-face {
 	font-family: 'SegoeUI';
 	src: url("./fonts/Segoe-UI.ttf") format('truetype');
-}
-
-/* ANIMATIONS */
-@keyframes button-idle {
-	0% {
-		background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(50,50,50,0.5) 90%);
-	}
-	50% {
-		background: linear-gradient(180deg, rgba(0,0,0,0.5) 70%, rgba(20,20,20,0.5) 90%);
-	}
-	100% {
-		background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(50,50,50,0.5) 90%);
-	}
 }

@@ -124,6 +124,8 @@
 
 			// Fade in
 			setTimeout(() => {
+				logo.style.transition = "2.5s opacity ease-in-out"
+				overlay.style.transition = "2.5s opacity ease-in-out"
 				overlay.style.opacity = "1";
 				logo.style.opacity = "1";
 			}, 1000)
