@@ -2,5 +2,5 @@
    "entry": "./src/",
    "output": "./dist",
    "port": "5100",
-   "exclude": [".otf", ".ttf"]
+   "exclude": ["cobra_cruise.mp4", "background2.jpg", "land_group.jpg", "news/", "events/"]
 }
