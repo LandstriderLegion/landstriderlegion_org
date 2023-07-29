@@ -1,32 +1,29 @@
-version: '3.2'
+version: '3.8'
 services:
   nginx:
-    image: nginx
-    restart: always
+    build: .
+    # restart: always
     ports:
       - 80:80
-    volumes:
-      - ./server/nginx.conf:./etc/nginx/nginx.conf
-      - ./client/dist/:/var/www/html/
-  mongo:
-    image: mongo:7.0-rc3-jammy
-    restart: always
-    volumes:
-      - mongodb:/data/db
   wiki:
     image: mediawiki
     restart: always
     volumes:
-      - static:/var/ww/html/
+      - static:/var/www/html/
   wikiSQL:
     image: mysql
     restart: always
     volumes:
-      - sql:/var/lib/mysql
+      - sql-data:/var/lib/mysql
+  # mongo:
+  #   image: mongo:7.0-rc3-jammy
+  #   restart: always
+  #   volumes:
+  #     - mongo-data:/data/db
 volumes:
   static:
-  mongodb:
-  sql:
+  # mongo-data:
+  sql-data:
 networks:
   siteBridge:
     driver: bridge
