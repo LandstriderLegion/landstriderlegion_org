@@ -57,12 +57,18 @@ function buttonAnimationLoop() {
         buttonFadeDown();
     }, 2700)
 }
-var buttonAnimInterval = setInterval(buttonAnimationLoop, 5500)
+// var buttonAnimInterval = setInterval(buttonAnimationLoop, 5500)
+var buttonAnimInterval;
 window.addEventListener("blur", (e) => {
     clearInterval(buttonAnimInterval);
+    button.innerText = `button{background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(60,60,60,0.5) 90%);}`
+    console.log("lost focus")
 })
 window.addEventListener("focus", (e) => {
+    clearInterval(buttonAnimInterval);
+    button.innerText = `button{background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(60,60,60,0.5) 90%);}`
     buttonAnimInterval = setInterval(buttonAnimationLoop, 5500);
     buttonAnimationLoop();
+    console.log("got focus")
 })
-buttonAnimationLoop()
+// buttonAnimationLoop()
