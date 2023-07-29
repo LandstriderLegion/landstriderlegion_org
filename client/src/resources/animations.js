@@ -18,6 +18,8 @@ window.addEventListener("scroll", () => {
     }
 })
 
+var interrupter = true; // Interrupt constant animations (like buttons)
+
 // Buttons
 const buttonGradientElem = document.createElement("style");
 buttonGradientElem.setAttribute("id", "buttonGradAnim");
@@ -32,13 +34,13 @@ function buttonAnimationLoop() {
             button.innerText = `button{background: linear-gradient(180deg, rgba(0,0,0,0.5) ${40 + l}%, rgba(${60 - (l * 1.3)},${60 - (l * 1.3)},${60 - (l * 1.3)},0.5) 90%);}`
             
             if (l >= 30) return;
-            else {
+            else if (!interrupter) {
                 l++;
                 buttonFadeUp();
             }
         }, 83)
     }
-    buttonFadeUp();
+    if (!interrupter) buttonFadeUp();
 
     // Fade down
     function buttonFadeDown() {
@@ -47,28 +49,36 @@ function buttonAnimationLoop() {
             button.innerText = `button{background: linear-gradient(180deg, rgba(0,0,0,0.5) ${40 + l}%, rgba(${60 - (l * 1.3)},${60 - (l * 1.3)},${60 - (l * 1.3)},0.5) 90%);}`
 
             if (l <= 0) return;
-            else {
+            else if (!interrupter) {
                 l--;
                 buttonFadeDown();
             }
         }, 83)
     }
     setTimeout(() => {
-        buttonFadeDown();
+        if (!interrupter) buttonFadeDown();
     }, 2700)
 }
-// var buttonAnimInterval = setInterval(buttonAnimationLoop, 5500)
 var buttonAnimInterval;
+
+// Detect focus
 window.addEventListener("blur", (e) => {
+    interrupter = true;
     clearInterval(buttonAnimInterval);
-    button.innerText = `button{background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(60,60,60,0.5) 90%);}`
     console.log("lost focus")
 })
 window.addEventListener("focus", (e) => {
-    clearInterval(buttonAnimInterval);
-    button.innerText = `button{background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgba(60,60,60,0.5) 90%);}`
+    if (interrupter) {
+        interrupter = false;
+        clearInterval(buttonAnimInterval);
+        buttonAnimInterval = setInterval(buttonAnimationLoop, 5500);
+        buttonAnimationLoop();
+        console.log("got focus")
+    }
+})
+if (interrupter) {
+    interrupter = false;
     buttonAnimInterval = setInterval(buttonAnimationLoop, 5500);
     buttonAnimationLoop();
-    console.log("got focus")
-})
-// buttonAnimationLoop()
+    console.log("Manually starting")
+}
