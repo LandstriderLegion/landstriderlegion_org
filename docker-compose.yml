@@ -1,20 +1,35 @@
 version: '3.8'
 services:
   nginx:
+    container_name: landstrider_nginx
     build: .
     # restart: always
     ports:
       - 80:80
+    networks:
+      - siteBridge
   wiki:
-    image: mediawiki
+    container_name: landstrider_wiki
+    # image: mediawiki:1.40
+    build:
+      context: .
+      dockerfile: ./server/Wiki.Dockerfile
     restart: always
     volumes:
       - static:/var/www/html/
+      - ./server/LocalSettings.php:/var/www/html/LocalSettings.php
+    networks:
+      - siteBridge
   wikiSQL:
+    container_name: landstrider_sql
     image: mysql
     restart: always
     volumes:
       - sql-data:/var/lib/mysql
+    env_file:
+      - ./server/.env
+    networks:
+      - siteBridge
   # mongo:
   #   image: mongo:7.0-rc3-jammy
   #   restart: always
