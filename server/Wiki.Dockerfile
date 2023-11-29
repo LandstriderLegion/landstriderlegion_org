@@ -2,7 +2,7 @@ FROM mediawiki:1.40
 
 # Copy assets and configs
 COPY ./client/dist/resources/icon.png /var/www/html/resources/assets/icon.png
-#COPY ./server/LocalSettings.php /var/www/html/LocalSettings.php
+COPY ./server/LocalSettings.php /var/www/html/LocalSettings.php
 
 # Download and install skins
 WORKDIR /var/www/html/skins/

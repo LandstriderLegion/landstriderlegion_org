@@ -1,13 +1,5 @@
 version: '3.8'
 services:
-  nginx:
-    container_name: landstrider_nginx
-    build: .
-    # restart: always
-    ports:
-      - 80:80
-    networks:
-      - siteBridge
   wiki:
     container_name: landstrider_wiki
     # image: mediawiki:1.40
@@ -19,7 +11,7 @@ services:
       - static:/var/www/html/
       - ./server/LocalSettings.php:/var/www/html/LocalSettings.php
     networks:
-      - siteBridge
+      - wiki
   wikiSQL:
     container_name: landstrider_sql
     image: mysql
@@ -29,16 +21,10 @@ services:
     env_file:
       - ./server/.env
     networks:
-      - siteBridge
-  # mongo:
-  #   image: mongo:7.0-rc3-jammy
-  #   restart: always
-  #   volumes:
-  #     - mongo-data:/data/db
+      - wiki
+networks:
+  wiki:
+    driver: bridge
 volumes:
   static:
-  # mongo-data:
   sql-data:
-networks:
-  siteBridge:
-    driver: bridge

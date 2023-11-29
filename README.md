@@ -5,6 +5,8 @@ Website for Landstrider Legion, a player-group for the video game *Elite: Danger
 1. On a VPS, install the following packages:
     - git
     - Docker
+    - Nginx
+Ensure Docker Compose is installed.
 <br><br>
 
 2. Clone the website repository:
@@ -14,29 +16,31 @@ Website for Landstrider Legion, a player-group for the video game *Elite: Danger
     Then, navigate into the root folder of the repo.
 <br><br>
 
-3. Build a Docker image, using the included Dockerfile, by running this command:
+3. Run the install script with sudo. This will copy the files to the necessary places and install Coriolis
     ```
-    docker build -t landstrider_site .
+    sudo bash ./install.sh
     ```
 <br>
 
-4. Run the Docker image using the following command:
+4. Start (or restart) nginx and initialize all the containers using Docker Compose
     ```
-    sudo docker run -p 80:80 -d --name landstrider_site --mount type=volume,source=db-data,target=data/db landstrider_site
+    sudo docker compose up -d
     ```
     The site will continue running until it is shutdown.
 <br><br>
 
 5. To shutdown the site, run the following commands:
     ```
-    sudo docker kill landstrider_site
-    sudo docker rm landstrider_site
+    sudo systemctl stop nginx
+    sudo docker compose down
     ```
 
 
-## Server Information
-The server is managed using an NGINX instance on port 80.
+## Server Information (Production)
+The server is managed using an NGINX instance on port 443 (HTTPS).
 
-The APIs are managed by NodeJS scripts running as processes thanks to the PM2 package. The data API runs on port 3000, and the content handler runs on port 3001.
+`landstriderlegion.space` (port 443) is static content served from /var/www/html
 
-The database is managed using a MongoDB instance on port 5000 within the Docker container. All data is output to a Docker Volume named "`db-data`".
+`wiki.landstriderlegion.space` (port 80) is a MediaWiki instance running from Docker and managed via Docker Compose (containers `landstrider_wiki` (MediaWiki instance) and `landstrider_sql` (MySQL server for MediaWiki content))
+
+`shipyard.landstriderlegion.space` is an instance of Coriolis being server from /var/www/shipyard/build

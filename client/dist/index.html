@@ -1,8 +1,107 @@
 <!DOCTYPE html><html lang="en-us"><head><title>Landstrider Legion</title><meta name="viewport" content="width=device-width,initial-scale=1.0" /><meta charset="UTF-8" /><link rel="stylesheet" href="resources/style.css" /><link rel="icon" href="resources/icon.png" sizes="192x192" /><meta
 			name="description"
 			content="Established in 3307, the Landstrider Legion is a Generalist squadron committed to educating commanders in the secrets of the universe, honing them into Elite-caliber operators and masters of their crafts."
-		/><style>.background{background-image:url(images/background1.jpg);}</style></head><body><noscript><h1>This site requires JavaScript!</h1><h2>Please make sure you're using a modern browser with JavaScript enabled.</h2></noscript><header class="header"><h1>Landstrider Legion</h1></header><div class="background"><section class="maincontent"><div class="content"><h1>About Us</h1><p>
-						Established in 3307, the Landstrider Legion is a Generalist squadron committed to educating commanders in the secrets of the universe, honing them into Elite-caliber operators and masters of their crafts.
-					</p><p>
-						Whether you’re a brand new commander looking to find your way in the galaxy, a veteran star-hopper flying out of the mailslot backwards, or just looking for an active community to play with, the Legion invites you to join our community and our journey for interstellar glory.
-					</p></div><div class="content"><h1>Bulletin Board</h1><p style="text-align: center"><strong>Visit the <a href="news/index.html"> News &amp; Updates page</a> for more information</strong></p><ul><li><b>Introducing our first major expedition: <a href="./news/lljttd.html">"Landstrider Legion Jaunt to The Dot"</a></b></li></ul></div><div class="content"><h2>Game Resources</h2><div style="justify-content: center; display: flex; margin-top: 20px"><a style="margin-right: 40px" target="_parent" href="https://edsy.org/" class="button"><h3>EDSY</h3></a><a style="margin-right: 40px" target="_parent" href="https://coriolis.io/" class="button"><h3>Coriolis</h3></a><a style="margin-right: 40px" target="_parent" href="https://www.edsm.net/" class="button"><h3>EDSM</h3></a><a style="margin-right: 40px" target="_parent" href="https://eddb.io/" class="button"><h3>EDDB</h3></a><a target="_parent" href="https://inara.cz/" class="button"><h3>Inara</h3></a></div></div></section></div><script src="./resources/navbar.js"></script></body></html>
+		/></head><body><noscript><p><b>Heads up! </b>
+				You're using this site with JavaScript disabled. While the site will still function, please be aware that certain things may not look correct.
+			</p></noscript><nav><a href="/">Landstrider Legion</a><div id="nav-right"><a href="//wiki.landstriderlegion.space">Wiki</a>|
+				<a href="./not_yet.html">News</a>|
+				<a href="./not_yet.html">Events</a>|
+				<a href="/l/inara">Inara</a>|
+				<a href="/l/discord">Discord</a></div></nav><header><div id="video-wrapper"><video autoplay muted loop><source src="./resources/media/background.mp4"></video></div><div id="overlay"><h1>Landstrider Legion</h1><h2><span id="heading-subtext">For the glory of The Legion. Welcome, commander.</span><span id="cursor">_</span></h2></div></header><main><div id="scroll-tracker"></div><div id="logo-wrapper"><img alt="logo" id="header-logo" src="./resources/icon.png"></div><div class="content-wrapper"><h2>About Us</h2><p>
+					Established in 3307, the Landstrider Legion is a Generalist squadron committed to educating commanders in the secrets of the universe, honing them into Elite-caliber operators and masters of their crafts.
+				</p><p>
+					Whether you're a brand new commander looking to find your way in the galaxy, a veteran star-hopper flying out of the mailslot backwards, or just looking for an active community to play with, the Legion invites you to join our community and our journey for interstellar glory.
+				</p></div><div class="content-wrapper content-grid"><div class="img-container"><img src="./images/land_group2.jpg" alt="picture of several of the legion's members, including all of their founders"><p class="caption">CMDR Sirius T. Dog</p></div><div class="grid-container"><h3>Founded to be Different</h3><p>Tired of their dysfunctional, inactive squadron, eight Elite: Dangerous veterans teamed up to start a new squadron with three goals: professionalism, casualness, activeness.
+						<br>After several years, the squadron still emphasizes those values in all of their activities.
+					</p></div></div><div class="content-wrapper content-grid"><div class="grid-container"><h3>How We Got Here</h3><p>Leaving behind what they had spent years creating, hundreds of commanders left their home system of Apotanites to become Legionaires, and undertake the 300 light-year journey to the Legion's homesystem of Korotep.
+						<br>From there, the Legion prospored, becoming an active center of trading, combat, exploration, and BGS operations.
+					</p></div><div class="img-container"><img src="./images/korotep_sunrise.png" alt="sunrise in Korotep"><p class="caption">CMDR Burrito_Riot</p></div></div><div class="content-wrapper content-grid"><div class="img-container"><img src="./images/legion_ship.jpg" alt="Legion member standing in front of their ship"><p class="caption">CMDR TishTech</p></div><div class="grid-container"><h3>The Legion Way</h3><p>The Legion is here to compliments the skill sets of all commanders, whether they're the newest trader, or the most veteran fighter. Our wide spectrum of experience levels allows us to offer a plethora of different opportunities.
+						<br>Start the day by fighting pirates in one system, have lunch at one of our planetary ports, and finish the day dropping of cargo at one of our starports. There's something for everyone!
+					</p></div></div><div class="content-wrapper"><h2>Join the Legion</h2><div class="flex-container"><a rel="noopener" href="/l/discord" target="_blank"><button>
+							Discord
+						</button></a><a rel="noopener" href="/l/inara" target="_blank"><button>
+							Inara
+						</button></a></div></div></main><footer><p>Landstrider Legion &copy; 2024</p><p>Not endorsed or associated with Frontier Developments</p></footer><script async src="./resources/animations.js"></script><script>
+			var overlay = document.getElementById("overlay");
+			var logo = document.getElementById("header-logo");
+			var sub = document.getElementById("heading-subtext");
+			var cursor = document.getElementById("cursor");
+			var header = document.getElementsByTagName("header")[0];
+
+			// Set all styles for animations
+			sub.innerText = "";
+			logo.style.opacity = "0";
+			overlay.style.opacity = "0";
+			header.style.position = "fixed";
+
+			// Fade in
+			setTimeout(() => {
+				logo.style.transition = "2.5s opacity ease-in-out"
+				overlay.style.transition = "2.5s opacity ease-in-out"
+				overlay.style.opacity = "1";
+				logo.style.opacity = "1";
+			}, 1000)
+
+			// Typing text
+			var typed = false;
+			var text = ""
+			var strings = [
+				"For the glory of the Legion.",
+				" Welcome,",
+				" commander."
+			]
+
+			var cursorAnim = setInterval(() => {
+				if (!typed) {
+					cursor.style.opacity = "100%";
+					setTimeout(() => {
+						cursor.style.opacity = "0%";
+					}, 600)
+				} else {
+					clearInterval(cursorAnim);
+					cursor.style.opacity = "0";
+				}
+			}, 1200)
+
+			function typeText(string, int) {
+				var i = 0;
+				var interval = setInterval(() => {
+					if (i < string.length) {
+						text += string[i];
+						sub.innerText = text;
+						i++
+					} else clearInterval(interval)
+				},int)
+			}
+
+			setTimeout(async () => {
+				typeText(strings[0], 40);
+				setTimeout(() => {
+					typeText(strings[1], 50);
+				},2300)
+				setTimeout(() => {
+					typeText(strings[2], 65)
+				},3500)
+				setTimeout(() => {
+					typed = true;
+				}, 5000)
+			}, 4000)
+
+			// Scrolling animation
+			window.addEventListener("scroll", () => {
+				var scrollTop = document.documentElement.scrollTop;
+				var distanceTop = window.pageYOffset + tracker.getBoundingClientRect().top;
+				var opacity = 1.0;
+				
+				if (scrollTop > distanceTop) {
+					opacity = 1 - ((scrollTop - distanceTop) / height);
+				}
+				if (opacity >= 0) header.style.opacity = opacity;
+				
+				if (opacity <= 0) {
+					header.style.display = "none";
+				} else {
+					header.style.display = "block";
+				}
+			})
+		</script></body></html>
