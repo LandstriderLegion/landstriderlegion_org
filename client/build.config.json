@@ -2,5 +2,11 @@
    "entry": "./src/",
    "output": "./dist",
    "port": "5100",
-   "exclude": ["cobra_cruise.mp4", "background2.jpg", "land_group.jpg", "news/", "events/"]
+   "exclude": [
+      "cobra_cruise.mp4",
+      "land_group.jpg",
+      "background2.jpg",
+      "banner.png",
+      "logo.svg"
+   ]
 }

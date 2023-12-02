@@ -7,9 +7,11 @@ services:
       context: .
       dockerfile: ./server/Wiki.Dockerfile
     restart: always
+    ports:
+      - "8000:80"
     volumes:
       - static:/var/www/html/
-      - ./server/LocalSettings.php:/var/www/html/LocalSettings.php
+      #- ./server/LocalSettings.php:/var/www/html/LocalSettings.php
     networks:
       - wiki
   wikiSQL:

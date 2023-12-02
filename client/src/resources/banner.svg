@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440">
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="0.1">
+        <stop stop-color="rgb(21,73,130)" offset="2%" stop-opacity="27%"/>
+        <stop stop-color="rgb(0,114,80)" offset="23%" stop-opacity="15%"/>
+        <stop stop-color="rgb(171,136,47)" offset="53%" stop-opacity="12%"/>
+        <stop stop-color="rgb(239,71,35)" offset="91%" stop-opacity="9%"/>
+    </linearGradient>
+    <rect width="2560" height="1440" fill="rgb(0,0,0)" />
+    <rect x="0" y="0" width="2560" height="1440" fill="url(#background)" />
+    <image href="./icon.png" height="768" width="768" x="896" y="336" />
+</svg>
